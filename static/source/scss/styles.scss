@@ -1,8 +1,41 @@
 html, body {height:100%;}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
 body{
-    background: $ui_dark_shade1;
     margin: 0px;
     padding: 0px;
     height: 100%;
     min-height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: $ui_dark_shade1;
+}
+
+.card_body{
+    padding: $ui_padding_small;
+    display: inline-flex;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 0px 25px $ui_dark_shade1;
+    border-radius: 4px;
+}
+.search_hotel{
+    margin-top: 70px;
+    width: 320px;
+    height: 313px;
+}
+
+button{
+    background: $ui_purple;
+    border: 0px;
+    border-radius: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding: 0px 20px;
 }

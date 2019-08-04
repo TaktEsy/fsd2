@@ -1,24 +1,46 @@
-.wrapper{
-    margin: 0 auto;
-    width: $ui_size_container;
-    
-    height: 100%;
-}
 .container{
     background: white;
-    padding: $ui_padding $ui_padding*5;
+    width: 1160px;
+    margin: 0 auto;
 }
-.middle{
-    height: 100%;
-    background: url("../img/lounge.jpg") no-repeat green;
-    background-size: cover;
-    background-position-y: 20%;
-    
-    .lounge_box{
-        
+#topside{
+    height: 70px;
+
+    .topside_box{
+        padding: $ui_padding_exsmall 0px;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        display: flex;
     }
+    
+    .topside-logo{
+        background: url("../img/logo.png") no-repeat;
+        height: 40px;
+        width: 106px;
+    }
+    .topside-menu{
+        list-style: none;
+        font-family: 'Montserrat';
+        padding: 13px 0px;
+        li{ 
+            display: inline-block;
+            padding-right: 20px;
+            font-size: 14px;
+            line-height: 17px;
+            color: $ui_dark_shade3; 
+        }
+    }
+    .topside-buttons{
+        height:100%;
+    }
+
 }
 
-.container_footer{
-    height: 300px;
+.middleside{
+    height: 830px;
+    background: url("../img/lounge.jpg") no-repeat green;
+    background-size: cover;
+    background-position-y: 100%;
 }
