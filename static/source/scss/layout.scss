@@ -3,6 +3,8 @@
     width: 1160px;
     margin: 0 auto;
 }
+
+/* Top part's layout style*/
 #topside{
     height: 70px;
 
@@ -43,4 +45,26 @@
     background: url("../img/lounge.jpg") no-repeat green;
     background-size: cover;
     background-position-y: 100%;
+}
+
+/* Footer styles */
+#downside{
+    .downside_box{
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        display: flex;
+    }
+    padding: 107px 0px;
+    p{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+    }
 }
