@@ -49,22 +49,37 @@
 
 /* Footer styles */
 #downside{
+    // color: $ui_dark_shade3;
+    // a{color: $ui_dark_shade3;}
+    // p{
+    //     font-family: 'Montserrat';
+    //     font-style: normal;
+    //     // font-weight: bold;
+    //     font-size: 14px;
+    //     line-height: 24px;
+    //     /* identical to box height */
+    // }
+    
     .downside_box{
         flex-direction: row;
         align-content: space-between;
         justify-content: space-between;
         flex-wrap: nowrap;
         display: flex;
+        padding: 100px 0px;
     }
-    padding: 107px 0px;
-    p{
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        /* identical to box height */
+    /* Block with corp info*/
+    
+    .downside_corp{
+        width: 260px;
+    }
+        .downside_corp-logo{
+            background: url("../img/logo.png") no-repeat;
+            height: 40px;
+            width: 106px;
+        }
+        .downside_corp-text{
+            padding: 18px 0px; 
+        }
 
-        text-transform: uppercase;
-    }
 }

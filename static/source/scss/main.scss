@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import "varibales.scss";
-@import "styles.scss";
-@import "layout.scss";
+/* 
+*** Started by Adam in the rainy summer of 2019
+*/
+
+@import "varibales.scss";   // Переменные, константы для UI  
+@import "text.scss";        // Все, что связано с текстом в т.ч импорты
+@import "styles.scss";      // Все, что не удалось классифицировать. Должен изжить себя в будущем
+@import "layout.scss";      // Все, что связано с макетом в т.ч импорты

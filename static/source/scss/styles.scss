@@ -9,8 +9,8 @@ body{
     padding: 0px;
     height: 100%;
     min-height: 100%;
-    font-family: 'Quicksand', sans-serif;
-    color: $ui_dark_shade1;
+    // color: $ui_dark_shade3;
+    // line-height: 24px;
 }
 
 .card_body{
@@ -38,4 +38,7 @@ button{
     line-height: 15px;
     text-transform: uppercase;
     padding: 0px 20px;
+}
+menu{
+    list-style: none;
 }
