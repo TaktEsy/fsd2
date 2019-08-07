@@ -1,31 +1,39 @@
 .container{
-    background: white;
-    width: 1160px;
+    // width: 1160px;
     margin: 0 auto;
+    // display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    display: flex;
+    flex-grow: 1;
+    // grid-template-columns: 1fr 2fr 1fr;
 }
 
 /* Top part's layout style*/
 #topside{
-    height: 70px;
-
-    .topside_box{
-        padding: $ui_padding_exsmall 0px;
-        flex-direction: row;
-        align-content: space-between;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        display: flex;
+    background: white !important;
+    padding: $ui_padding_exsmall 0px;
+    #topside_box{
+        
+        
     }
     
     .topside-logo{
         background: url("../img/logo.png") no-repeat;
         height: 40px;
         width: 106px;
+        order: 0;
     }
-    .topside-menu{
+    .topside_nav{
+        display: flex;
+    }
+    .topside_nav-menu{
         list-style: none;
-        font-family: 'Montserrat';
-        padding: 13px 0px;
+        font-family: 'Montserrat', sans-serif;
+        padding: 12px 0px;
+        order: 1;
         li{ 
             display: inline-block;
             padding-right: 20px;
@@ -34,12 +42,15 @@
             color: $ui_dark_shade3; 
         }
     }
-    .topside-buttons{
-        height:100%;
+    .topside_nav-buttons{
+        order: 2;
     }
 
 }
-
+// .topside-buttons{
+//     align-self: flex-end;
+//     height:100%;
+// }
 .middleside{
     height: 830px;
     background: url("../img/lounge.jpg") no-repeat green;
@@ -49,24 +60,14 @@
 
 /* Footer styles */
 #downside{
-    // color: $ui_dark_shade3;
-    // a{color: $ui_dark_shade3;}
-    // p{
-    //     font-family: 'Montserrat';
-    //     font-style: normal;
-    //     // font-weight: bold;
-    //     font-size: 14px;
-    //     line-height: 24px;
-    //     /* identical to box height */
-    // }
+    
     
     .downside_box{
-        flex-direction: row;
-        align-content: space-between;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        display: flex;
         padding: 100px 0px;
+        // &>div{ 
+        //     display: inline-flex;
+        // }
+       
     }
     /* Block with corp info*/
     

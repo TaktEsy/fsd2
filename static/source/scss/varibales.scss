@@ -7,7 +7,7 @@ $ui_padding_large: 144px;
 $ui_padding_big: 89px;
 $ui_padding_middle: 55px;
 $ui_padding_small: 30px;
-$ui_padding_exsmall: $ui_padding_small/2; // 15px
+$ui_padding_exsmall: 14.5; // 15px
 
 
 /* Colors for UI */
@@ -16,8 +16,8 @@ $ui_dark_shade2: scale-color($ui_dark_shade1, $alpha: -75%);
 $ui_dark_shade3: scale-color($ui_dark_shade1, $alpha: -50%);
 $ui_dark_shade4: scale-color($ui_dark_shade1, $alpha: -25%);
 $ui_dark_shade5: scale-color($ui_dark_shade1, $alpha: -5%);
-$ui_purple: #bc9cff;
-$ui_green: #6fcf97;
+$purple: #bc9cff;
+$green: #6fcf97;
 
 
 /* Text family for UI */

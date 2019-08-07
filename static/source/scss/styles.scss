@@ -27,18 +27,17 @@ body{
     height: 313px;
 }
 
-button{
-    background: $ui_purple;
-    border: 0px;
-    border-radius: 22px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    padding: 0px 20px;
-}
+
+
 menu{
     list-style: none;
+}
+.topside-menu menu{
+    
+    li{
+        margin-right: 20px;
+    }
+    li:nth-last-of-type(1){
+        margin-right: 0px;
+    }
 }
