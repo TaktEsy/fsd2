@@ -1,0 +1,66 @@
+
+@mixin button{
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+    border: none;
+    box-shadow: 0px 0px 0px 2px $purple inset;
+    border-radius: 22px;
+    padding: 10px 22px 9px 22px;
+    color: white;
+   
+    font-weight: 800 !important;
+}
+
+.signin{
+    @include button;
+    margin-right: 20px;
+    background: white;
+    color: $purple;
+}
+.signup{
+    @include button;
+}
+/* Кнопка "Подобрать" */
+.takeit{
+    @include button;
+}
+input, select{
+    &:focus{
+        outline: none;
+    }
+}
+input, select{
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    padding: 9px 15px;
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+input[type="range"]{
+    padding: 0px;
+    -webkit-appearance: none;
+    
+    
+}
+/* Ползунки */
+input[type=range]::-webkit-slider-thumb {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -webkit-appearance:none;
+    height: 12px;
+    width:100%;
+}
+input[type=range]::-ms-track{
+    width: 100%;
+    cursor: pointer;
+    background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+    border-color: transparent;
+    color: transparent;
+}

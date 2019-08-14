@@ -5,11 +5,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 
-body{
+body, p{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: $text-body;
+    font-size: $text-body; // 14px
     line-height: 24px;
 }
 h1, h2, h3{
@@ -21,6 +21,12 @@ h1, h2{
 h1{
     font-size: $text-h1;
     line-height: 30px;
+    padding-top: 10px;
+    padding-bottom: 20.5px;
+    letter-spacing: 1px;
+}
+#middleside h1{
+    padding-top: 0px;
 }
 h2{
     font-size: $text-h2;
@@ -30,8 +36,20 @@ h3{
     font-size: $text-h3;
     line-height: 15px;
     text-transform: uppercase;
+    display: inline-block;
 }
+a{
+    font-size: $text-body;
+    color: $ui_dark_shade3;
+    text-decoration: none;
 
+}
+.small-text{
+    @extend p;
+    color: $ui_dark_shade3;
+    font-size: 12px;
+    line-height: 14px;
+}
 .arrow-down{
     background: url(../img/more.png);
     background-repeat: no-repeat;

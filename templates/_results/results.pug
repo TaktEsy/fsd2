@@ -1,0 +1,45 @@
+extends ../sides/base.pug
+block content
+    section(id="middleside")
+        div(class="container")
+            div(class="row")
+                div(class="col-sm")
+                    div(class="casper_card")
+                        div(class="card_header")
+                            h3 Даты пребывания в отеле
+                        div(class="card_body")
+                            input(type="text")
+                    div(class="casper_card")
+                        div(class="card_header")
+                            h3 Гости
+                        div(class="card_body")
+                            select
+                                option 3 Гостя, 1 Младенец
+                                option 2 Гостя, 2 Младенца
+                    div(class="casper_card")
+                        div(class="card_header")
+                            h3 Диапазон цены 
+                            span(class="small-text") 5000₽ - 10000₽
+                        div(class="card_body")
+                            input(type="range", min="0", max="100")
+                            p(class="small-text") Стоимость за сутки пребывания в номере
+                    div(class="casper_card")
+                        div(class="card_header")
+                            h3 Checkbox buttons
+                        div(class="card_body")
+                            input(type="checkbox" id="ch1")
+                            label(for="ch1") Можно курить
+                            input(type="checkbox" id="ch2" checked) 
+                            label(for="ch2") Можно с питомцами   
+                            input(type="checkbox" id="ch3" checked) 
+                            label(for="ch3") Можно пригласить гостей (до 10 человек)  
+                        select
+                            option(selected) Дополнительные удобства
+                            option Можно пригласить гостей (до 10 чел.)
+                
+                div(class="col-bg")
+                    
+                    include elems/hostel_cards.pug
+                            
+
+                    
