@@ -2,7 +2,10 @@ html, body {height:100%;}
 *{
     margin: 0;
     padding: 0;
-    outline: none;
+    outline: none;   
+}
+*, ::after, ::before {
+    box-sizing: border-box;
 }
 body{
     margin: 0px;
@@ -63,14 +66,26 @@ body{
 }
 
 .res_card{
-    .res_card-header{
+    // display: inline-flex;
+    // flex-basis: 270px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.5);
+    border-radius: 4px;
 
+
+    .res_card-header{
+        height: 151.3px;
+        width: 100%;
+        background: url(../../templates/_results/imgs/room.png);
+        background-repeat: no-repeat;
     }
     .res_card-body{
-
+        padding: 20px;
     }
     .res_card-footer{
-
+        width: 100%;
+        border-top: 1px solid rgba(31, 32, 65, 0.1);
     }
 }
 

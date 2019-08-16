@@ -16,18 +16,34 @@
     }
 }
 section{
-    display: flex;
+   
 }
-
 .container{
+    flex-wrap: wrap;
+    width: 100%;
     max-width: $size_container;
     margin: 0 auto;
-    display: inline-flex !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex;
+    
 }
+.full_container{
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    max-width: none;
+}
+.row{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    
+    .col{
+        flex-direction: column;
+        flex-grow: 1;
+    }
 
+}
 /* Top part's layout style*/
 #topside{
     background: white !important;
@@ -64,36 +80,15 @@ section{
     height: 830px;
     background-size: cover;
     background-position-y: 100%;
-    padding-top:30px;
     
-    .col-sm:first-of-type{
-        margin-right: 60px;
-    }
+
 }
 .middle_img{
     background: url("../img/lounge.jpg") no-repeat green;
     background-size: cover;
     background-position-y: 100%;
 }
-.row{
-    width:100%;
-    display: flex;
-    
-    .col-sm, .col-bg{
-        display: flex;
-        flex-direction: column;
-    }
-    .col-sm{
-        // width: 266px;
-        // width:100%;
-       flex-basis: 266px;
-    }
 
-    .col-bg{        
-        
-    }
-
-}
 
 /* Footer styles */
 #downside{
@@ -134,19 +129,5 @@ section{
     // padding: $ui_padding_exsmall 0px;
     .corpside_box{
 
-    }
-}
-@media screen and (max-width: 1160px) {
-    
-    
-    .downside_box{
-        padding: 15px;
-        &>div{
-            width:100%;
-            margin: 0px !important;
-        }
-        &>div:nth-of-type(2n+1){
-            background: gray;
-        }
     }
 }
