@@ -44,9 +44,12 @@ input, select{
 input[type="range"]{
     padding: 0px;
     -webkit-appearance: none;
-    
-    
 }
+input[type="checkbox"]{
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+
 /* Ползунки */
 input[type=range]::-webkit-slider-thumb {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -63,4 +66,25 @@ input[type=range]::-ms-track{
     background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
     border-color: transparent;
     color: transparent;
+}
+
+
+
+.ui-datepicker table {
+    
+    font-size: 1.2em !important;
+}
+
+#ui-datepicker-div{
+    background: white;
+    padding: 20px;
+    td{
+        padding: 12px;
+    }
+    #ui-datepicker-div thead span, .ui-datepicker-title span{
+        font-size: $text-h3;
+        line-height: 15px;
+        text-transform: uppercase;
+        display: inline-block;
+    }
 }

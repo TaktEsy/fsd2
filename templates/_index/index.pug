@@ -1,23 +1,24 @@
-extends base.pug
+extends ../sides/base.pug
 block content
-    
-    section(id="middleside" class="middle_img")
-        div(class="container")
-            div(class="card search_hotel")
-                div(class="card_header")
-                    div(class="col") 
-                        h1 Найдем номера под ваши пожелания
-                div(class="card_body")
-                    div(class="row")
-                        div(class="col-2")
-                            h3 Прибытие 
-                            input(type="text")
-                        div(class="col-2")
-                            h3 Выезд
-                            input(type="text")
-                        div(class="col")
-                            h3 Количество гостей
-                            input(type="text")
+    section(id="middleside_img")
+        div(class="wrapper")
+            div(class="search_hotel")
+                div(class="search_hotel-header")
+                    h1 Найдем номера под ваши пожелания
+                div(class="search_hotel-body")
+                    div()
+                        h3 Прибытие 
+                        input(type="text" class="date1" placeholder="ДД.ММ.ГГГГ")
+                    div()
+                        h3 Выезд
+                        input(type="text" class="date2" placeholder="ДД.ММ.ГГГГ")
+                    div()
+                        h3 Гости
+                        select(placeholder="Сколько гостей")
+                            option(value="" selected disabled) Сколько гостей
+                            option(value="adult_visiter") Взрослые
+                            option(value="child_visiter") Дети
+                            option(value="baby_visiter") Младенцы
                         
                 div(class="card_footer")
                     div(class="takeit") Подобрать

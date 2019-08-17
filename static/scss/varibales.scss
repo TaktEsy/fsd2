@@ -3,18 +3,20 @@ $size_container: 1160px;
 $size_min: 270px;
 
 /* Paddings */
-$ui_padding_exlarge: 233px;
-$ui_padding_large: 144px;
-$ui_padding_big: 89px;
-$ui_padding_middle: 55px;
-$ui_padding_small: 30px;
-$ui_padding_exsmall: 14.5; // 15px
+
+$padding_middle: 40px;
+
+$padding_40: 40px; // 20px
+$padding_30: 30px;
+$padding_20: 20px;
+$padding_10: 10px;
+$padding_15: 15px; // 15px
 
 
 /* Colors for UI */
 $ui_dark_shade1: #1f2041;
 $ui_dark_shade2: scale-color($ui_dark_shade1, $alpha: -75%);
-$ui_dark_shade3: scale-color($ui_dark_shade1, $alpha: -50%);
+$dark50: scale-color($ui_dark_shade1, $alpha: -50%);
 $ui_dark_shade4: scale-color($ui_dark_shade1, $alpha: -25%);
 $ui_dark_shade5: scale-color($ui_dark_shade1, $alpha: -5%);
 $purple: #bc9cff;

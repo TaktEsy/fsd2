@@ -17,75 +17,83 @@ body{
 }
 
 .card{
-    padding: $ui_padding_small;
-    display: inline-flex;
-    flex-direction: column;
-    background: white;
+    display: flex;
+    flex-direction: column;    
     box-shadow: 0px 0px 25px $ui_dark_shade1;
-    border-radius: 4px;
-
+    
     .card_header{
-        padding-bottom: 20px;
-        flex-basis: 100%;
-    }
-
-    .card_body{
-        display: inline-flex;
+        
     }
     .card_footer{
 
     }
 }
-.casper_card{
+.card_casper{
     background: none;
     box-shadow: none;
-    margin-bottom: 30px;
-    
-    &:first-of-type{
-        margin-bottom: 20px;
-    }
+
+    // margin-bottom: 30px;
+    @extend .card;
+
     h3{
         padding-bottom: 5px;
     }
-    .casp_head{
-        text-align: justify;
+    .card_casper-head{
+        
     }
-    .casp_body{
-
-    }
-    .casp_footer{
+    .card_casper-body{
 
     }
+    .card_casper-footer{
 
-
+    }
 }
+
+
 .search_hotel{
-    // margin-top: 70px;
-    width: 320px;
-    height: 313px;
+    @extend .card;
+    margin-top: 70px;
+    background: white;
+    border-radius: 4px;
+
+    select{
+        padding: 11px 0px 11px 15px;
+    }
 }
 
 .res_card{
-    // display: inline-flex;
-    // flex-basis: 270px;
+    div, h3, h4, p{display: inherit; line-height: 23px;}
+    p{color:$dark50;}
+    h3{color: $purple;}
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.342);
     border-radius: 4px;
-
+    margin-bottom: $padding_20;
 
     .res_card-header{
         height: 151.3px;
         width: 100%;
-        background: url(../../templates/_results/imgs/room.png);
+        background: url(https://placeimg.com/640/480/nature/sepia);
         background-repeat: no-repeat;
     }
     .res_card-body{
-        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px $padding_20;
+        padding: 20px 0px 10px 0px;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+        
+        
+        &>div>h4{padding-right:6px;}
+
+        &>div{align-items: flex-end;}
+        &>div:nth-of-type(2){align-items: flex-end;flex-grow: 1;}
+        &>div:nth-of-type(3) h4{color: $dark50;}
     }
     .res_card-footer{
-        width: 100%;
-        border-top: 1px solid rgba(31, 32, 65, 0.1);
+        
+        padding: 8px 19px $padding_20 $padding_20;
     }
 }
 

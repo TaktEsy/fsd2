@@ -1,45 +1,43 @@
 extends ../sides/base.pug
 block content
+    link(rel="stylesheet", href="css/star.css")
     section(id="middleside")
-        div(class="container")
-            div(class="row")
-                div(class="col")
-                    div(class="casper_card")
-                        div(class="card_header")
-                            h3 Даты пребывания в отеле
-                        div(class="card_body")
-                            input(type="text")
-                    div(class="casper_card")
-                        div(class="card_header")
-                            h3 Гости
-                        div(class="card_body")
-                            select
-                                option 3 Гостя, 1 Младенец
-                                option 2 Гостя, 2 Младенца
-                    div(class="casper_card")
-                        div(class="card_header")
-                            h3 Диапазон цены 
-                            span(class="small-text") 5000₽ - 10000₽
-                        div(class="card_body")
-                            input(type="range", min="0", max="100")
-                            p(class="small-text") Стоимость за сутки пребывания в номере
-                    div(class="casper_card")
-                        div(class="card_header")
-                            h3 Checkbox buttons
-                        div(class="card_body")
-                            input(type="checkbox" id="ch1")
-                            label(for="ch1") Можно курить
-                            input(type="checkbox" id="ch2" checked) 
-                            label(for="ch2") Можно с питомцами   
-                            input(type="checkbox" id="ch3" checked) 
-                            label(for="ch3") Можно пригласить гостей (до 10 человек)  
+        div(class="wrapper")
+            div
+                div(class="card_casper")
+                    div(class="card_header")
+                        h3 Даты пребывания в отеле
+                    div(class="card_body")
+                        input(type="text")
+                div(class="card_casper")
+                    div(class="card_header")
+                        h3 Гости
+                    div(class="card_body")
                         select
-                            option(selected) Дополнительные удобства
-                            option Можно пригласить гостей (до 10 чел.)
-                
-                div(class="col")
-                    
-                    include elems/hostel_cards.pug
+                            option 3 Гостя, 1 Младенец
+                            option 2 Гостя, 2 Младенца
+                div(class="card_casper")
+                    div(class="card_header")
+                        h3 Диапазон цены 
+                        span(class="small-text") 5000₽ - 10000₽
+                    div(class="card_body")
+                        input(type="range", min="0", max="100")
+                        p(class="small-text") Стоимость за сутки пребывания в номере
+                div(class="card_casper")
+                    div(class="card_header")
+                        h3 Checkbox buttons
+                    div(class="card_body")
+                        input(type="checkbox" id="ch1")
+                        label(for="ch1") Можно курить
+                        input(type="checkbox" id="ch2" checked) 
+                        label(for="ch2") Можно с питомцами   
+                        input(type="checkbox" id="ch3" checked) 
+                        label(for="ch3") Можно пригласить гостей (до 10 человек)  
+                    select
+                        option(selected) Дополнительные удобства
+                        option Можно пригласить гостей (до 10 чел.)
+            div()        
+                include elems/hostel_cards.pug
                             
 
                     

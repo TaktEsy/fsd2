@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+@mixin text-head($color:"auto", $family:" `Montserrat`, sans-serif", $bold: "normal",){
+    
+}
+
 
 body, p{
     font-family: 'Montserrat', sans-serif;
@@ -40,13 +44,13 @@ h3{
 }
 a{
     font-size: $text-body;
-    color: $ui_dark_shade3;
+    color: $dark50;
     text-decoration: none;
 
 }
 .small-text{
     @extend p;
-    color: $ui_dark_shade3;
+    color: $dark50;
     font-size: 12px;
     line-height: 14px;
 }
