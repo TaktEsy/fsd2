@@ -70,21 +70,24 @@ input[type=range]::-ms-track{
 
 
 
+
+
+.ui-datepicker-header{}
+
 .ui-datepicker table {
-    
+    a{font-size: 12px;}
     font-size: 1.2em !important;
 }
 
 #ui-datepicker-div{
+    @extend .card;
     background: white;
     padding: 20px;
-    td{
-        padding: 12px;
+    td{padding: 12px;}
+    .ui-datepicker-title span{
+        @extend h2;
     }
-    #ui-datepicker-div thead span, .ui-datepicker-title span{
-        font-size: $text-h3;
-        line-height: 15px;
-        text-transform: uppercase;
-        display: inline-block;
+    #ui-datepicker-div thead span, {
+        @extend h3;
     }
 }

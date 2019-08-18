@@ -1,0 +1,89 @@
+.card{
+    padding: $space_30;
+    border-radius: 4px;
+    display: grid;
+    box-shadow: 0px 0px 25px $ui_dark_shade1;
+    h1{padding-top: $space_10 - 3px;}
+
+    &>.card-head{}
+    &>.card-body{
+        display: grid;
+        grid-gap:$space_20;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    &>.card-footer{
+        margin-top: $space_10;
+    }
+    
+    input[type="text"]{
+        margin-bottom:10px;
+    }
+}
+
+
+.card_casper{
+    background: none;
+    box-shadow: none;
+
+    // margin-bottom: 30px;
+    @extend .card;
+
+    h3{
+        padding-bottom: 5px;
+    }
+    .card_casper-head{
+        
+    }
+    .card_casper-body{
+
+    }
+    .card_casper-footer{
+
+    }
+}
+
+
+.search_card{
+    @extend .card;
+    margin-top: 70px;
+    background: white;
+    .card-body{
+        div:nth-of-type(3){grid-column: span 2;}
+    }
+ }
+.res_card{
+    div, h3, h4, p{display: inherit; line-height: 23px;}
+    p{color:$dark50;}
+    h3{color: $purple;}
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.342);
+    border-radius: 4px;
+    margin-bottom: $padding_20;
+
+    .res_card-header{
+        height: 151.3px;
+        width: 100%;
+        background: url(https://placeimg.com/640/480/nature/sepia);
+        background-repeat: no-repeat;
+    }
+    .res_card-body{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px $padding_20;
+        padding: 20px 0px 10px 0px;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+        
+        
+        &>div>h4{padding-right:6px;}
+
+        &>div{align-items: flex-end;}
+        &>div:nth-of-type(2){align-items: flex-end;flex-grow: 1;}
+        &>div:nth-of-type(3) h4{color: $dark50;}
+    }
+    .res_card-footer{
+        
+        padding: 8px 19px $padding_20 $padding_20;
+    }
+}
