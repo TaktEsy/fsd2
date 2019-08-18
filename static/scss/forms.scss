@@ -41,32 +41,32 @@ input, select{
     font-size: 14px;
     line-height: 24px;
 }
-input[type="range"]{
-    padding: 0px;
-    -webkit-appearance: none;
-}
+// input[type="range"]{
+//     padding: 0px;
+//     -webkit-appearance: none;
+// }
 input[type="checkbox"]{
     border-radius: 4px;
     background: #FFFFFF;
 }
 
 /* Ползунки */
-input[type=range]::-webkit-slider-thumb {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border: 2px solid #FFFFFF;
-    border-radius: 10px;
-    box-sizing: border-box;
-    -webkit-appearance:none;
-    height: 12px;
-    width:100%;
-}
-input[type=range]::-ms-track{
-    width: 100%;
-    cursor: pointer;
-    background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
-    border-color: transparent;
-    color: transparent;
-}
+// input[type=range]::-webkit-slider-thumb {
+//     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+//     border: 2px solid #FFFFFF;
+//     border-radius: 10px;
+//     box-sizing: border-box;
+//     -webkit-appearance:none;
+//     height: 12px;
+//     width:100%;
+// }
+// input[type=range]::-ms-track{
+//     width: 100%;
+//     cursor: pointer;
+//     background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+//     border-color: transparent;
+//     color: transparent;
+// }
 
 
 
@@ -80,7 +80,7 @@ input[type=range]::-ms-track{
 }
 
 #ui-datepicker-div{
-    @extend .card;
+    // @include card(30);
     background: white;
     padding: 20px;
     td{padding: 12px;}

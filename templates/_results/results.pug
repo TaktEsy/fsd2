@@ -2,13 +2,14 @@ extends ../sides/base.pug
 block content
     link(rel="stylesheet", href="css/star.css")
     section(id="middleside")
+        
         div(class="wrapper")
             div
                 div(class="card_casper")
                     div(class="card_header")
                         h3 Даты пребывания в отеле
                     div(class="card_body")
-                        input(type="text")
+                        input(type="text" class="date1" placeholder="21 Авг - 31 Дек")
                 div(class="card_casper")
                     div(class="card_header")
                         h3 Гости
@@ -21,7 +22,7 @@ block content
                         h3 Диапазон цены 
                         span(class="small-text") 5000₽ - 10000₽
                     div(class="card_body")
-                        input(type="range", min="0", max="100")
+                        <div id="slider-range"></div>
                         p(class="small-text") Стоимость за сутки пребывания в номере
                 div(class="card_casper")
                     div(class="card_header")
@@ -33,9 +34,25 @@ block content
                         label(for="ch2") Можно с питомцами   
                         input(type="checkbox" id="ch3" checked) 
                         label(for="ch3") Можно пригласить гостей (до 10 человек)  
-                    select
-                        option(selected) Дополнительные удобства
-                        option Можно пригласить гостей (до 10 чел.)
+                div(class="card_casper")
+                    div(class="card_header")
+                        h3 Доступность 
+                    div(class="card_body")
+                        div
+                            input(type="checkbox" id="ch4")
+                            label(for="ch4") Широкий коридор
+                        div
+                            input(type="checkbox" id="ch5")
+                            label(for="ch5") Помошник для инвалидов
+                div(class="card_casper")
+                    div(class="card_header")
+                        h3 Удобства номера 
+                    div(class="card_body")
+                        select()
+                            option(value="" selected disabled) Удобства номера 
+                            option(value="") Спальни
+                            option(value="") Кровати
+                            option(value="") Ванные комнаты
             div()        
                 include elems/hostel_cards.pug
                             

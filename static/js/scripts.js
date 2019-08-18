@@ -5,4 +5,16 @@ $(document).ready(function() {
         firstDay:1,
         dateFormat:"dd.mm.yy"
     });
+    $(".slider").slider({
+        min: 0,
+        max: 1000,
+        values: [0,1000],
+        range: true
+    });
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+    });
 });

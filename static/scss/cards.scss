@@ -1,5 +1,5 @@
-.card{
-    padding: $space_30;
+@mixin card($padding:$space_30) {
+    padding: $padding;
     border-radius: 4px;
     display: grid;
     box-shadow: 0px 0px 25px $ui_dark_shade1;
@@ -12,22 +12,15 @@
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
-    &>.card-footer{
+    &>.card-down{
         margin-top: $space_10;
-    }
-    
-    input[type="text"]{
-        margin-bottom:10px;
     }
 }
 
 
 .card_casper{
-    background: none;
-    box-shadow: none;
-
-    // margin-bottom: 30px;
-    @extend .card;
+    padding-bottom: $padding_30;
+    &:first-of-type{padding-bottom: $padding_20;}
 
     h3{
         padding-bottom: 5px;
@@ -45,7 +38,7 @@
 
 
 .search_card{
-    @extend .card;
+    @include card($space_30,);
     margin-top: 70px;
     background: white;
     .card-body{
