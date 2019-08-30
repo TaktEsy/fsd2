@@ -1,2 +1,4 @@
 node_modules
-*.code-workspace
+fsd2.code-workspace
+.gitignore
+.gitattributes
