@@ -1,0 +1,21 @@
+/* 
+*** Started by Adam Kalinin at the end of July rainy summer 2019
+*/
+
+/* Переменные, константы для UI */
+@import "varibales.scss";
+
+/* Все, что связано с текстом */
+@import "text.scss";
+
+/* Все что связано с формами */
+@import "forms.scss";
+
+/* Все, что не удалось классифицировать. Должен изжить себя в будущем */
+@import "styles.scss";
+
+/* Все, что связано с версткой, шаблоном, макетом, сеткой */
+@import "layout.scss";
+
+/* Все, что связано с карточками */
+@import "cards.scss";

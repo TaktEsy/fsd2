@@ -1,0 +1,12 @@
+extends ../layouts/main.pug
+include ../includes/utils/cards
+
+block variables
+    - var title = 'Index | Webpack + Pug'
+    - var description = ' Описание'
+block content
+    
+    section(id="middleside_img")
+        div(class="wrapper")
+            +card-standart('Найдем номера под ваши пожелания')
+            
