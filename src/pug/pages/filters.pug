@@ -61,17 +61,5 @@ block content
                 - n = 0;
                 while n < 12
                     - n++
-                    div(class="res_card")
-                        div(class="res_card-header")
-                        div(class="res_card-body")
-                            div 
-                                h4 № 
-                                h4 888 
-                            div    
-                                h3 Люкс
-                            div 
-                                h4 9 999₽ 
-                                p(class="small-text") Сутки
-                        div(class="res_card-footer")
-                            p.
-                                Footer
+                    
+                    +card-filters(Math.floor(Math.random()*(100-0+1)+0))

@@ -1,5 +1,5 @@
-mixin card-standart(title)
-    .card-standart
+mixin card-search(title)
+    .search-card
         div(class="search_card card")
             div(class="search_hotel-header")
                 h1=title
@@ -20,4 +20,21 @@ mixin card-standart(title)
             div(class="card-down")
                 div(class="takeit")
                     a(href="./filters.html") Подобрать
+
+mixin card-filters(num, lux)
+    - var random_lux = Math.random() >= 0.5;
+    div(class="res_card")
+        div(class="res_card-header")
+        div(class="res_card-body")
+            div 
+                h4 № 
+                h4=num 
+            div    
+                if random_lux
+                    h3 Люкс
+            div 
+                h4 9 999₽ 
+                p(class="small-text") Сутки
+        div(class="res_card-footer")
+            img(src="../../../img/filters/star4.png")
 
