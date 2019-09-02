@@ -23,6 +23,8 @@
 .takeit{
     @include button;
 }
+// label{display: inherit;}
+
 input, select{
     &:focus{
         outline: none;
@@ -46,6 +48,7 @@ input, select{
 //     -webkit-appearance: none;
 // }
 input[type="checkbox"]{
+    // display: inherit;
     border-radius: 4px;
     background: #FFFFFF;
 }

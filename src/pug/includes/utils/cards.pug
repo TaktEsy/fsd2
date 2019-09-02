@@ -18,23 +18,39 @@ mixin card-search(title)
                         option(value="child_visiter") Дети
                         option(value="baby_visiter") Младенцы
             div(class="card-down")
-                div(class="takeit")
-                    a(href="./filters.html") Подобрать
+                a(href="./filters.html")
+                    div(class="takeit")
+                        h3 Подобрать
+mixin card-reg()
+    .card-reg
+        div(class="card")
+            div(class="card-header")
+                h1 Регистрация аккаунта
+            div(class="card-body")
+
+            div(class="card-down")
 
 mixin card-filters(num, lux)
     - var random_lux = Math.random() >= 0.5;
+    - var random_star = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
+
     div(class="res_card")
         div(class="res_card-header")
         div(class="res_card-body")
             div 
                 h4 № 
                 h4=num 
-            div    
+            div
                 if random_lux
                     h3 Люкс
             div 
                 h4 9 999₽ 
                 p(class="small-text") Сутки
         div(class="res_card-footer")
-            img(src="../../../img/filters/star4.png")
+            div
+                img(src=`/static/img/filters/star${random_star}.png`)
+            div
+                h4 777
+                p(class="small-text") Отзывов
+
 

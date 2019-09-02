@@ -19,6 +19,7 @@
 
 
 .card_casper{
+    
     padding-bottom: $padding_30;
     &:first-of-type{padding-bottom: $padding_20;}
 
@@ -29,7 +30,9 @@
         
     }
     .card_casper-body{
-
+        display: flex;
+        flex-direction: column;
+        &>div{display: flex;flex-direction: row;}
     }
     .card_casper-footer{
 
@@ -44,7 +47,9 @@
     .card-body{
         div:nth-of-type(3){grid-column: span 2;}
     }
- }
+}
+
+
 .res_card{
     div, h3, h4, p{display: inherit; line-height: 23px;}
     p{color:$dark50;}
@@ -52,13 +57,13 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.342);
-    border-radius: 4px;
     margin-bottom: $padding_20;
 
     .res_card-header{
+        border-radius: 4px 4px 0px 0px;
         height: 151.3px;
         width: 100%;
-        background: url(https://placeimg.com/640/480/nature/sepia);
+        background: url(https://placeimg.com/640/480/nature);
         background-repeat: no-repeat;
     }
     .res_card-body{
@@ -72,11 +77,11 @@
         &>div>h4{padding-right:6px;}
 
         &>div{align-items: flex-end;}
-        &>div:nth-of-type(2){align-items: flex-end;flex-grow: 1;}
+        &>div:nth-of-type(2){flex-grow: 1;}
         &>div:nth-of-type(3) h4{color: $dark50;}
     }
     .res_card-footer{
-        
+        &>div{align-items: flex-end;}
         padding: 8px 19px $padding_20 $padding_20;
     }
 }

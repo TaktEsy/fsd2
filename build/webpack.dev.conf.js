@@ -13,8 +13,15 @@ const devConf = merge(baseConf, {
         contentBase: './public',
         watchContentBase: true,
         inline: true,
-        historyApiFallback: true,
+        historyApiFallback: {
+            rewrites: [
+                { from: /^\/$/, to: '/views/landing.html' },
+                { from: /^\/reg/, to: '/views/subpage.html' },
+                { from: /./, to: '/views/404.html' }
+            ]
+        },
         port: 8080,
+        
         stats: {
             colors: true,
             modules: false,
