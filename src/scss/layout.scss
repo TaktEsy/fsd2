@@ -13,6 +13,13 @@ section{width:100%;}
     @include wrapper($size_container); 
 }
 
+
+#menu, #content{}
+
+#content{
+    padding-bottom: 70px;
+}
+
 @media (max-width:1160px){
     .wrapper{padding: $padding_15;}
     #topside, #downside{
@@ -141,12 +148,7 @@ section{width:100%;}
         display: flex;
         align-items: center;
     }
-    .topside_nav{
 
-    }
-    .topside-bths{
-
-    }
 }
 
 

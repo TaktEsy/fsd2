@@ -1,14 +1,13 @@
 mixin casper_input(h3_title, hover_title)
-    div(class="card_casper")
+    div(class="card_casper_once")
         div(class="card_header")
             h3= h3_title
-
         div(class="card_body")
             input(type="text" class="date1" placeholder="21 Авг - 31 Дек")
 
 
 mixin casper_select(h3_title, hover_title)
-    div(class="card_casper")
+    div(class="card_casper_once")
         div(class="card_header")
             h3= h3_title
         div(class="card_body")
@@ -18,30 +17,31 @@ mixin casper_select(h3_title, hover_title)
 
 
 mixin casper_range(h3_title, hover_title)
-    div(class="card_casper")
+    div(class="card_casper_once")
         div(class="card_header")
             h3= h3_title
             span(class="small-text")= hover_title
         div(class="card_body")
-            <div id="slider-range"></div>
+            div(id="slider-range")
             p(class="small-text") Стоимость за сутки пребывания в номере
 
 
 mixin casper_checkbox(h3_title,hover_title, content)
     div(class="card_casper")
-        div(class="card_casper-header")
+        div(class="card_header")
             h3=h3_title
-        div(class="card_casper-body")
+        div(class="card_body")
             each arr, twin_arr in content
                 if (typeof arr['text'] === "undefined")
-                    div()
+                    div(class="card_body_cell")
                         input(type="checkbox" id="")
-                    div(class="")
-                        label(for="")= arr['title']
+                    div(class="card_body_cell")
+                        p= arr['title']
                 else
-                    div()
+                    div(class="card_body_cell")
                         input(type="checkbox" id="")
-                    div()
+                        
+                    div(class="card_body_cell")
                         h4= arr['title']
                         p(class="small-text")= arr['text']
 

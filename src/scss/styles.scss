@@ -29,3 +29,37 @@ menu{
         margin-right: 0px;
     }
 }
+
+.filter_box{
+    margin-top:22px;
+    justify-content: center;
+    flex-direction: row;
+    grid-column: span 3;
+    >.filter_nav{display: flex; justify-content: center; padding-bottom: 10px;}
+
+    .filter_textblock{justify-content: center; display: flex;}
+
+    .filter_nav_picker:first-of-type{
+        margin-right:20px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        a{color: white; padding: 0px 20px;}
+    }
+    .filter_nav_picker{
+        justify-content: center;
+        padding: 8px 0px;
+        border-radius: 22px;
+        font-weight: bold;
+        width: 40px;
+        
+    }
+    .filter_nav_picker:last-of-type{
+        padding-top: 12px;
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+
+    .filter_nav_picker:last-of-type img, .filter_nav_picker:last-of-type a{
+        display: block;
+        margin: 0 auto;
+    }
+
+}

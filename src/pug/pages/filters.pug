@@ -5,25 +5,37 @@ include ../includes/utils/forms
 block content
     -var content_simple = [{title:'Можно курить'}, {title:'Можно с питомцами'}, {title:'Можно пригласить гостей (до 10 человек)'},]
     -var content_availability = [{title:'Широкий коридор', text:'Ширина коридоров в номере не менее 91см'}, {title:'Помошник для инвалидов',text: 'На 1 этаже вас встретит специалист и проводит до номера'}]
-    link(rel="stylesheet", href="css/star.css")
+    
     section(id="middleside")
-        
         div(class="wrapper")
-            div
+            div(id="menu")
                 +casper_input("Дата пребывания в отеле")
                 +casper_select("Гости")
                 +casper_range("Диапазон цены", "5000-10000₽")
                 +casper_checkbox('Checkbox buttons', null, content_simple)
                 +casper_checkbox('Доступность', null, content_availability)
                 +casper_select("Удобства номера")
-                
-                //- +casper_checkbox('Доступность',null, [{title:'Широкий коридор',text:'Ширина коридоров в номере не менее 91см'},{title:'Помошник для инвалидов',text: 'На 1 этаже вас встретит специалист и проводит до номера'}])
-                
-                
-            div()        
+            div(id="content")        
                 div 
                     h1 Номера, которые мы для вас подобрали 
                 - n = 0;
                 while n < 12
                     - n++
                     +card-filters(Math.floor(Math.random()*(100-0+1)+0))
+            
+                div(class="filter_box") 
+                    div(class="filter_nav")
+                        - n = 0;
+                        while n != 6
+                            - n++
+                            
+                            if n!=6
+                                div(class="filter_nav_picker")
+                                    a(href="#")= n
+                            else
+                                div(class="filter_nav_picker")
+                                    a(href="#")
+                                        img(src="/static/img/filters/arrow_forward.png")
+           
+                    div(class="filter_textblock")
+                        p 1 - 12 из 100+ вариантов аренды

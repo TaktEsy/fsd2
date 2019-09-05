@@ -1,55 +1,74 @@
-@mixin card($padding:$space_30) {
+/* 
+*** Здесь изложены миксины карточек и их готовые вариации
+*/
+
+@mixin card($padding:$space_30, $border_radius:4px, $gap_x:0, $gap_y:0, $marginD:0px) {
     padding: $padding;
-    border-radius: 4px;
+    border-radius: $border_radius;
     display: grid;
-    box-shadow: 0px 0px 25px $ui_dark_shade1;
+
     h1{padding-top: $space_10 - 3px;}
 
-    &>.card-head{}
-    &>.card-body{
+    &>.card_header{
+        h3{padding-bottom: 16px;}
+        .small-text{float:right;}
+    }
+    &>.card_body{
         display: grid;
-        grid-gap:$space_20;
+        grid-gap: $gap_y $gap_x;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
-    &>.card-down{
-        margin-top: $space_10;
+    &>.card_down{
+        margin-top: $marginD;
     }
 }
 
-
-.card_casper{
+/* Используется в основном на странице результатов */
+@mixin card_casper{
+    @include card(0, 0, 8px, 10px);
+    margin-bottom: $space_30;
     
-    padding-bottom: $padding_30;
-    &:first-of-type{padding-bottom: $padding_20;}
+    &>.card_body{
+        grid-template-rows: 1fr;
+        grid-template-columns: auto 1fr;
+    }
+}
 
-    h3{
-        padding-bottom: 5px;
-    }
-    .card_casper-head{
-        
-    }
-    .card_casper-body{
-        display: flex;
-        flex-direction: column;
-        &>div{display: flex;flex-direction: row;}
-    }
-    .card_casper-footer{
+// Карточка фильтров с двумя колонками в теле
+.card_casper{@include card_casper();}
 
+
+// Карточка фильтров с одной колонкой в теле
+.card_casper_once{
+    @include card_casper();
+    
+    &:first-of-type{margin-bottom: $space_20;}
+    
+    &>.card_header{h3{padding-bottom: 5px;}}
+    &:nth-of-type(3)>.card_header{
+        padding-bottom: 21px;
+    }
+    &>.card_body{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: none;
     }
 }
 
 
+// Карточка выбора номера с главной страницы
 .search_card{
-    @include card($space_30,);
+    @include card($padding:$space_30, $border_radius:4px, $gap_x:10px, $gap_y:20px, $marginD:30px);
     margin-top: 70px;
     background: white;
-    .card-body{
-        div:nth-of-type(3){grid-column: span 2;}
-    }
+    box-shadow: 0px 0px 25px $ui_dark_shade1;
+    .card_body{ div:nth-of-type(3){grid-column: span 2;} }
+    
 }
 
 
+// Карточка с фотографией номера на странице фильров
 .res_card{
     div, h3, h4, p{display: inherit; line-height: 23px;}
     p{color:$dark50;}
@@ -84,4 +103,9 @@
         &>div{align-items: flex-end;}
         padding: 8px 19px $padding_20 $padding_20;
     }
+}
+
+
+.detail_card{
+    @include card($padding:$space_30, $border_radius:4px, $gap_x:10px, $gap_y:20px, $marginD:30px);
 }

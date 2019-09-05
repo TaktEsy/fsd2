@@ -1,40 +1,41 @@
 mixin card-search(title)
-    .search-card
-        div(class="search_card card")
-            div(class="search_hotel-header")
-                h1=title
-            div(class="card-body")
-                div()
-                    h3 Прибытие 
-                    input(type="text" class="date1" placeholder="ДД.ММ.ГГГГ")
-                div()
-                    h3 Выезд
-                    input(type="text" class="date2" placeholder="ДД.ММ.ГГГГ")
-                div()
-                    h3 Гости
-                    select(placeholder="Сколько гостей")
-                        option(value="" selected disabled) Сколько гостей
-                        option(value="adult_visiter") Взрослые
-                        option(value="child_visiter") Дети
-                        option(value="baby_visiter") Младенцы
-            div(class="card-down")
-                a(href="./filters.html")
-                    div(class="takeit")
+    div(class="search_card")
+        div(class="card_header")
+            h1=title
+        div(class="card_body")
+            div()
+                h3 Прибытие 
+                input(type="text" id="ui-datepicker-1" placeholder="ДД.ММ.ГГГГ")
+            div()
+                h3 Выезд
+                input(type="text" id="ui-datepicker-2" placeholder="ДД.ММ.ГГГГ")
+            div()
+                h3 Гости
+                select(placeholder="Сколько гостей")
+                    option(value="" selected disabled) Сколько гостей
+                    option(value="adult_visiter") Взрослые
+                    option(value="child_visiter") Дети
+                    option(value="baby_visiter") Младенцы
+        div(class="card_down")
+            
+                div(class="takeit")
+                    a(href="./filters.html")
                         h3 Подобрать
 mixin card-reg()
     .card-reg
         div(class="card")
-            div(class="card-header")
+            div(class="card_header")
                 h1 Регистрация аккаунта
-            div(class="card-body")
+            div(class="card_body")
 
-            div(class="card-down")
+            div(class="card_down")
+
 
 mixin card-filters(num, lux)
     - var random_lux = Math.random() >= 0.5;
     - var random_star = Math.floor(Math.random() * (5 - 4 + 1)) + 4;
 
-    div(class="res_card")
+    div(class="res_card", onclick="location.href='./detail.html'")
         div(class="res_card-header")
         div(class="res_card-body")
             div 

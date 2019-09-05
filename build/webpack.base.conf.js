@@ -49,59 +49,61 @@ module.exports = {
 					name: '[name].[ext]',
 				}
 			}, 
-			{
-				test: /\.scss$/,
-				use: [
-					'style-loader',
-					MiniCssExtract.loader,
-					{
-						loader: 'css-loader',
-						options: { sourceMap: true}
-					}, 
-					{
-						loader: 'sass-loader',
-						options: { sourceMap: true}
-					},
-					{
-						loader: 'postcss-loader',
-						options: { sourceMap: true, config: {path: `${PATHS.src}/js/postcss.config.js` } }
-					},
-				]
-			}, 
-			{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					MiniCssExtract.loader,
-					{
-						loader: 'css-loader',
-						options: { sourceMap: true}
-					},
-					{
-						loader: 'postcss-loader',
-						options: { sourceMap: true, config: {path: `${PATHS.src}/js/postcss.config.js` } }
-					},
-				]
-			}
-		]},
+		{
+			test: /\.scss$/,
+			use: [
+				'style-loader',
+				MiniCssExtract.loader,
+				{
+					loader: 'css-loader',
+					options: { sourceMap: true}
+				}, 
+				{
+					loader: 'sass-loader',
+					options: { sourceMap: true}
+				},
+				{
+					loader: 'postcss-loader',
+					options: { sourceMap: true, config: {path: `${PATHS.src}/js/postcss.config.js` } }
+				},
+			]
+		}, 
+		{
+			test: /\.css$/,
+			use: [
+				'style-loader',
+				MiniCssExtract.loader,
+				{
+					loader: 'css-loader',
+					options: { sourceMap: true}
+				},
+				{
+					loader: 'postcss-loader',
+					options: { sourceMap: true, config: {path: `${PATHS.src}/js/postcss.config.js` } }
+				},
+			]
+		}
+	]},
 	
-		plugins:[
-			new MiniCssExtract({
-				filename: `${PATHS.assets}css/[name].css`,
-			}),
-		// new HtmlPlugin({
-		// 	hash: false,
-		// 	template: `${PATHS.src}/index.html`,
-		// 	filename: './index.html',
-		// }),
-			new CopyPlugin([
-				{ from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-      			{ from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
-      			{ from: `${PATHS.src}/static`, to: '' },
-			]),
-			...PAGES.map(page => new  HtmlPlugin({
-				template: `${PAGES_DIR}/${page}`,
-				filename: `./${page.replace(/\.pug/,'.html')}`,
-			}))
+	plugins:[
+		new MiniCssExtract({
+			filename: `${PATHS.assets}css/[name].css`,
+		}),
+	// new HtmlPlugin({
+	// 	hash: false,
+	// 	template: `${PATHS.src}/index.html`,
+	// 	filename: './index.html',
+	// }),
+		new CopyPlugin([
+			{ from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+			{ from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
+			{ from: `${PATHS.src}/static`, to: '' },
+		]),
+
+		...PAGES.map(page => new  HtmlPlugin({
+			template: `${PAGES_DIR}/${page}`,
+			filename: `./${page.replace(/\.pug/,'.html')}`,
+		})),
+
 	],
 }
